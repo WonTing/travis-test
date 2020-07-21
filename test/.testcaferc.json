@@ -1,0 +1,16 @@
+{
+  "browsers": ["chrome"], // 使用 chrome 瀏覽器測試
+  "speed": 1, // 測試執行速度 1(最快) ~ 0.01(最慢)
+  "concurrency": 2, // 同時執行幾個瀏覽器測試
+  "src": [""], // 要跑的測試程式碼位置
+  "reporter": [
+    {
+      "name": "spec"
+    },
+    {
+      "name": "json",
+      "output": "reports/report.json"
+    }
+  ],
+  "screenshotPath": "reports/screenshots"
+}
