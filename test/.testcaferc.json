@@ -1,9 +1,9 @@
 {
   "browsers": ["chrome"], // 使用 chrome 瀏覽器測試
-  "speed": 1, // 測試執行速度 1(最快) ~ 0.01(最慢)
-  "concurrency": 2, // 同時執行幾個瀏覽器測試
-  "src": [""], // 要跑的測試程式碼位置
-  "reporter": [
+  "speed": 1, // 測試執行速度 0.01(最慢) ~ 1(最快)
+  "concurrency": 1, // 同時執行幾個瀏覽器測試
+  "src": ["./testcafe"], // 要跑的測試程式碼位置
+  "reporter": [ // 同時產生 spec 和 json 格式測試報告
     {
       "name": "spec"
     },
@@ -12,5 +12,9 @@
       "output": "reports/report.json"
     }
   ],
-  "screenshotPath": "reports/screenshots"
+  "screenshotPath": "reports/screenshots", // 截圖存放位置
+  "takeScreenshotsOnFails": true, // 測試失敗時自動截圖
+  "skipJsErrors": true,
+  "selectorTimeout": 3000, // 尋找網頁元素的 timeout 時間 3 秒 (預設值：10000)
+  "assertionTimeout": 3000 // 判定預期結果的 timeout 時間 3 秒 (預設值：3000)
 }

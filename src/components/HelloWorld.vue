@@ -1,8 +1,11 @@
 <template>
   <div class="hello">
+    <h1 data-cafe="testcafe-h1">HELLO Home</h1>
     <ul class="list">
       <li v-for="item in data" :key="item" class="list-item">
-        <img src="https://picsum.photos/200" alt="">
+        <PuSkeleton height="200px" width="200px" :loading="isLoading">
+          <img src="https://picsum.photos/200" alt="">
+        </PuSkeleton>
       </li>
     </ul>
   </div>
@@ -17,25 +20,33 @@ export default {
   data () {
     return {
       data: 5,
+      isLoading: false
+    }
+  },
+  created () {
+    this.getLoading()
+  },
+  methods: {
+    getLoading () {
+      this.isLoading = true
+      setTimeout(() => {
+        this.isLoading = false
+      }, 3000)
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+  .list {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+  }
+  .list-item {
+    padding: 20px;
+  }
 </style>
