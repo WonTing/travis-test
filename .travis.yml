@@ -1,7 +1,7 @@
 # .travis.yml
 language: node_js
 node_js:
-  - 10
+  - 10.15.3
 notifications:
     email:
         recipients:
@@ -11,4 +11,4 @@ notifications:
 install:
   - npm install
 script:
-  - npm start
+  - npm run serve
