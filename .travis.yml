@@ -5,10 +5,10 @@ node_js:
 notifications:
     email:
         recipients:
-            - cwtk159x37@gmail.com
+          - cwtk159x37@gmail.com
         on_success: always
         on_failure: always
 install:
-    - npm install
+  - npm install
 script:
-    - npm start
+  - npm start
