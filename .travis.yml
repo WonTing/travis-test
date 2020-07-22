@@ -10,5 +10,3 @@ notifications:
         on_failure: always
 install:
   - npm install
-script:
-  - npm run serve
