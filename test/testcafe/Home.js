@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe'
 
 fixture `Home`
-  .page `https://wonting.github.io/travis-test/`
+  .page `https://wonting.github.io/travis-test-demo/`
 
 test(`Home 測試`, async t => {
   await t

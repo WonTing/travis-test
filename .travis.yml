@@ -25,8 +25,9 @@ install:
 # 安裝依賴套件
   
 script:
-  - npm run test
+  - echo "skipping tests"
   - npm run build
+  - npm run test
 # 要執行必須在 package.json 中 scripts 設定, 沒有設定指令的話, 預設為 npm run test
 
 
