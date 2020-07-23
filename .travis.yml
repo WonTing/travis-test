@@ -35,15 +35,15 @@ script:
 deploy:
   provider: pages
   # 要部署到哪個服務上, GitHub Pages/ Heroku/ npm ...
-  skip-cleanup: true
+  skip_cleanup: true
   # 要設定為 true, 不然 Travis CI 會把上方創建出的資料都刪除, 包刮 build 出的檔案
-  github-token: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKEN
   # Travis CI 會抓取在 Github 上設置的 Environment Variables 中新增的變數
-  local-dir: './dist'
+  local_dir: dist
   # 指定部署的目錄, 編譯出的當案資料夾
   repo: WonTing/travis-test
   # 指定要部署到哪裡
-  target-branch: gh-pages
+  target_branch: gh-pages
   # 指定目標分支, 預設 gh-pages
 
 script:
