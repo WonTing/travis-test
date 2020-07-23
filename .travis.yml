@@ -43,7 +43,9 @@ deploy:
   # 指定部署的目錄, 編譯出的當案資料夾
   repo: WonTing/travis-test
   # 指定要部署到哪裡
-  target_branch: gh-pages
+  on:
+    branch: gh-pages
+  # target_branch: gh-pages
   # 指定目標分支, 預設 gh-pages
 
 script:
