@@ -32,7 +32,6 @@ script:
 
 
 # CD 部分
-
 deploy:
   provider: pages
   # 要部署到哪個服務上, GitHub Pages/ Heroku/ npm ...
@@ -46,3 +45,14 @@ deploy:
   # 指定要部署到哪裡
   target_branch: master
   # 指定目標分支, 預設 gh-pages
+
+# email 通知
+# notifications:
+#   email:
+#     recipients:
+#       - xx@gmail.com
+#     # [always|never|change]
+#     on_success: always 
+#       # default: change
+#     on_failure: always
+#       # default: always
