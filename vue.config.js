@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/travis-test/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/travis-test-demo/' : '/',
 	pwa: {
 		workboxPluginMode: 'InjectManifest',
     workboxOptions: {
