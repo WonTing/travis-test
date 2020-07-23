@@ -26,8 +26,9 @@ install:
   
 script:
   - echo "skipping tests"
-  - npm run build
+  - npm run deploy
   - npm run test
+  - npm run build
 # 要執行必須在 package.json 中 scripts 設定, 沒有設定指令的話, 預設為 npm run test
 
 
