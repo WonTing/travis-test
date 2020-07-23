@@ -17,7 +17,8 @@ language: node_js
 node_js:
   - 10.15.3
 # 設定 Node.JS 版本, 可以設定多個版本, 確認在不同版本下的執行狀況
-# "stable" 使用最新版本執行
+# 'stable' 使用最新版本
+# node 使用最新穩定版本
 
 install:
   - npm install
@@ -30,8 +31,6 @@ script:
 
 
 # CD 部分
-
-# script 要加上 npm run build
 
 deploy:
   provider: pages
