@@ -1,4 +1,4 @@
-workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+workbox.precaching.precacheAndRoute(self.__precacheManifest || [])
 
 workbox.routing.registerRoute(
   // 設定要 cache 的 API 或 檔案的路徑
