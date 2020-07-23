@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 data-cafe="testcafe-h1">HELLO Home</h1>
+    <h1 data-cafe="testcafe-h1">HELLO CI/CD</h1>
     <ul class="list">
       <li v-for="item in data" :key="item" class="list-item">
         <PuSkeleton height="200px" width="200px" :loading="isLoading">
