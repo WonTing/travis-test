@@ -13,28 +13,36 @@ before_install:
   - stty cols 80
 
 language: node_js
+# 使用什麼語言
 node_js:
   - 10.15.3
-  - "stable"
+# 設定 Node.JS 版本, 可以設定多個版本, 確認在不同版本下的執行狀況
+# "stable" 使用最新版本執行
 
 install:
   - npm install
+# 安裝依賴套件
   
 script:
-  - npm run build
   - npm run serve
+  - npm run test
+# 要執行必須在 package.json 中 scripts 設定, 沒有設定指令的話, 預設為 npm run test
+
 
 # CD 部分
-deploy:
-  provider: pages
-  # 要部署到哪個服務上, GitHub Pages/ Heroku/ npm ...
-  skip-cleanup: true
-  # 要設定為 true, 不然 Travis CI 會把上方創建出的資料都刪除, 包刮 build 出的檔案
-  github-token: $GITHUB_TOKEN
-  # Travis CI 會抓取在 Github 上設置的 Environment Variables 中新增的變數
-  local-dir: dist
-  # 指定部署的目錄, 編譯出的當案資料夾
-  repo: WonTing/travis-test
-  # 指定要部署到哪裡
-  target_branch: gh-pages
-  # 指定目標分支, 預設 gh-pages
+
+# script 要加上 npm run build
+
+# deploy:
+#   provider: pages
+#   # 要部署到哪個服務上, GitHub Pages/ Heroku/ npm ...
+#   skip-cleanup: true
+#   # 要設定為 true, 不然 Travis CI 會把上方創建出的資料都刪除, 包刮 build 出的檔案
+#   github-token: $GITHUB_TOKEN
+#   # Travis CI 會抓取在 Github 上設置的 Environment Variables 中新增的變數
+#   local-dir: dist
+#   # 指定部署的目錄, 編譯出的當案資料夾
+#   repo: WonTing/travis-test
+#   # 指定要部署到哪裡
+#   target_branch: gh-pages
+#   # 指定目標分支, 預設 gh-pages
